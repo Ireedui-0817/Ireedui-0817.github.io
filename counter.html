@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <button onclick="hasah()">-</button>
+        <input id="inputValue">
+        <button onclick="nemeh()">+</button>
+        <button onclick="reset()">Reset</button>
+        <h1 id="h1tag">0</h1>
+        <script src="counter/app.js"></script>
+    </center>
+    <script>
+        var un = 0
+        var inputValue = Number(document.getElementById("inputValue").value)
+        function nemeh(){       
+            var inputValue = Number(document.getElementById("inputValue").value)
+            var h1tag= Number(document.getElementById("h1tag").innerHTML)
+            if(inputValue == ""){
+                var hariu=h1tag+1
+            }else{
+                var hariu=h1tag + inputValue  
+            }
+            document.getElementById("h1tag").innerHTML= hariu  
+
+        }
+
+        function hasah(){
+            var inputValue = Number(document.getElementById("inputValue").value)
+            var h1tag= Number(document.getElementById("h1tag").innerHTML)
+            if (inputValue == "") {
+                var hariu= h1tag - 1 
+            } else {
+                var hariu= h1tag - inputValue  
+            }
+            document.getElementById("h1tag").innerHTML= hariu
+        }
+        function reset(){
+            var inputValue = Number(document.getElementById("inputValue").value)
+            var h1tag= Number(document.getElementById("h1tag").innerHTML)
+            var hariu= h1tag - h1tag    
+            document.getElementById("h1tag").innerHTML= hariu
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+	<style>
+	div{
+		background-color: aqua;
+		height:200px;
+		width:200px;
+		float:left;
+		margin:0 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="do"></div>
+	<div id="re"></div>
+	<div id="mi"></div>
+	<button onclick="hell()">click</button>
+	<script>
+		var x = 0
+		function hell(){
+           if (x == 0 ) {
+            document.getElementById("do").style.visibility="hidden"
+            document.getElementById("re").style.visibility="visible"
+            document.getElementById("mi").style.visibility="visible"
+            }
+        
+            else if ( x == 1){
+            document.getElementById("do").style.visibility="visible"
+            document.getElementById("re").style.visibility="hidden"
+            document.getElementById("mi").style.visibility="visible"        
+            }
+            else if(x == 2){
+            document.getElementById("do").style.visibility="visible"
+            document.getElementById("re").style.visibility="visible"
+            document.getElementById("mi").style.visibility="hidden"}
+            else if(x == 3){
+             document.getElementById("do").style.visibility="visible"
+             document.getElementById("re").style.visibility="visible"
+            document.getElementById("mi").style.visibility="visible"}
+            else if(x == 4){
+             document.getElementById("do").style.visibility="hidden"
+             document.getElementById("re").style.visibility="hidden"
+            document.getElementById("mi").style.visibility="hidden"}
+    
+            else{
+             document.getElementById("do").style.backgroundColor="red"
+             document.getElementById("re").style.backgroundColor="yellow"
+             document.getElementById("mi").style.backgroundColor="grey"
+             x = -1
+        }
+     x++
+}   
+           
+    </script>
+</body>

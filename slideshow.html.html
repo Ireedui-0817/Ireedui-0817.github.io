@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+            <style>
+                
+            </style>
+    </head>
+    <body>
+       <center>
+        <img onclick="togglePause()" src="img.jpg" alt="" id="myImg" width="500px" height="400px">
+        <script>
+            var myImages = ["img.jpg","img1.jpg", "img2.jpg", "img3.jpg","img4.jpg"]
+            var i = 0
+            var intervalId = 0
+               
+           function myFunction(){
+            document.querySelector("img").src = myImages[i]
+            i++
+            if(i == myImages.length){
+                i = 0
+            }
+      }
+        function togglePause() {
+            if(intervalId != 0){
+                clearInterval(intervalId)
+                intervalId = 0
+            }
+        
+          else{
+              intervalId = setInterval(myFunction,1000)
+                
+          }
+        }
+        </script>
+        </center> 
+    </body>
+    </html>
+ 
